@@ -15,7 +15,7 @@
                     <header class="entry__header">
 
                         <h2 class="entry__title h1">
-                            <a href="<?php the_permalink(); ?>" title=""><?php the_title();?></a>
+                            <?php the_title();?>
                         </h2>
                         
 
@@ -31,8 +31,7 @@
                     
                     <div class="entry__content">
                         
-                        <?php the_excerpt(); ?>
-                        <a href="<?php the_permalink(); ?>">Read More</a>
+                        <?php the_content(); ?>
                     </div> 
 
                 </article> <!-- end entry -->
