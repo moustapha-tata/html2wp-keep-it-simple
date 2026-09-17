@@ -68,30 +68,28 @@
         </div> <!-- end row -->
 
        <nav class="s-header__nav-wrap">
+<?php 
+    $upper_menu = array(
+        'theme_location'  => 'top-menu',
+        'menu'            => 'upper-menu',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu-slug}-container row',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul id = "%1$s" class = "%2$s s-header__nav">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => '',
+    );
+    wp_nav_menu( $upper_menu );
+ ?>
 
-           <div class="row">
-
-                <ul class="s-header__nav">
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li class="has-children"><a href="#0">Dropdown</a>
-                        <ul>
-                            <li><a href="#0">Submenu 01</a></li>
-                            <li><a href="#0">Submenu 02</a></li>
-                            <li><a href="#0">Submenu 03</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="demo.html">Demo</a></li>	
-                    <li><a href="archives.html">Archives</a></li>
-                    <li class="has-children"><a href="#0">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Blog Entries</a></li>
-                            <li><a href="single.html">Single Blog</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="page.html">Page</a></li>
-                </ul> <!-- end #nav -->
-
-           </div> 
 
         </nav> <!-- end #nav-wrap -->
 
