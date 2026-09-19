@@ -17,18 +17,18 @@
     ================================================== -->
 
     <?php if (is_rtl()):?>
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/base-rtl.css">
-            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/main-rtl.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/base-rtl.css">
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/main-rtl.css">
     <?php else: ?>
-            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/base.css">
-            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/main.css">
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/base.css">
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/main.css">
             <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/style.css">
     <?php endif; ?>
 
     <!-- script
     ================================================== -->
-    <script src="<?php echo get_template_directory_uri();?>/js/modernizr.js"></script>
-    <script defer src="<?php echo get_template_directory_uri();?>/js/fontawesome/all.min.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/modernizr.js"></script>
+    <script defer src="<?php echo get_template_directory_uri();?>/assets/js/fontawesome/all.min.js"></script>
 
     <!-- favicons
     ================================================== -->

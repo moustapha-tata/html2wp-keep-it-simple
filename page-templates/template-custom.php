@@ -1,5 +1,5 @@
 <?php 
-/*Template Name: custome Page*/
+/*Template Name: custom Page*/
 
 
 
