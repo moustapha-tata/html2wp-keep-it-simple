@@ -1,4 +1,26 @@
 <?php 
+function html2wp_scripts_and_styles() {
+    $theme_version = wp_get_theme()->get( 'Version' );
+    $theme_uri     = get_template_directory_uri();
+
+    // 1.call css files with support RTL
+    if ( is_rtl() ) {
+        wp_enqueue_style( 'html2wp-base', $theme_uri . '/assets/css/base-rtl.css', array(), $theme_version );
+        wp_enqueue_style( 'html2wp-main', $theme_uri . '/assets/css/main-rtl.css', array( 'html2wp-base' ), $theme_version );
+    } else {
+        wp_enqueue_style( 'html2wp-base', $theme_uri . '/assets/css/base.css', array(), $theme_version );
+        wp_enqueue_style( 'html2wp-main', $theme_uri . '/assets/css/main.css', array( 'html2wp-base' ), $theme_version );
+        wp_enqueue_style( 'html2wp-style', get_stylesheet_uri(), array( 'html2wp-main' ), $theme_version );
+    }
+
+    // 2. call JavaScript files
+    wp_enqueue_script( 'modernizr', $theme_uri . '/assets/js/modernizr.js', array(), '3.11.2', false );
+    wp_enqueue_script( 'fontawesome', $theme_uri . '/assets/js/fontawesome/all.min.js', array(), '5.15.4', true ); 
+    wp_enqueue_script( 'html2wp-main', $theme_uri . '/assets/js/main.js', array( 'jquery' ), $theme_version, true );
+}
+add_action( 'wp_enqueue_scripts', 'html2wp_scripts_and_styles' );
+
+
 function tatakeepitsimple_registar_sidebars(){
 	$page_sidebar = array(
 						"name" => "Main Sidebar",
