@@ -78,3 +78,15 @@ function add_custom_nav_menu_classes($classes, $item) {
 
     return $classes;
 }
+
+// ACF JSON saving files auto in theme
+add_filter( 'acf/settings/save_json', function( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
+} );
+
+// ACF JSON read & right path from theme
+add_filter( 'acf/settings/load_json', function( $paths ) {
+    unset( $paths[0] );
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+} );
