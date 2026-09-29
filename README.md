@@ -3,7 +3,7 @@
 A clean, semantic, and modern WordPress theme converted from static HTML/CSS into a fully dynamic and modular WordPress theme, developed strictly following the **WordPress Coding Standards (WPCS)** and modern security best practices.
 
 <!-- Live demo placeholder (To be updated in Day 5) -->
-> **Live Demo:** *[Click here to explore the live theme preview] (https://html2wp-demo.s2-tastewp.com/)*
+> **Live Demo:** [Click here to explore the live theme preview](https://keepit.xo.je/)
 
 ---
 
