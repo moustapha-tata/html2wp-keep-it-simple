@@ -1,62 +1,97 @@
-           <div id="sidebar" class="s-content__sidebar large-4 column">
-            <?php 
-            if (is_active_sidebar('sidebar0')) {
-                dynamic_sidebar( 'sidebar0' );
-            }
-             ?>
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @package html2wp-keep-it-simple
+ */
 
-               <div class="widget widget--search">
-                  <h3 class="h6">Search</h3> 
-                  <form action="#">
-                     <input type="text" value="Search here..." onblur="if(this.value == '') { this.value = 'Search here...'; }" onfocus="if (this.value == 'Search here...') { this.value = ''; }" class="text-search">
-                     <input type="submit" value="" class="submit-search">
-                  </form>
-               </div>
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+?>
 
-               <div class="widget widget--categories">
-                   <h3 class="h6">Categories.</h3> 
-                   <ul>
-                        <li><a href="#0" title="">Wordpress</a> (2)</li>
-                        <li><a href="#0" title="">Ghost</a> (14)</li>
-                        <li><a href="#0" title="">Joomla</a> (5)</li>
-                        <li><a href="#0" title="">Drupal</a> (3)</li>
-                        <li><a href="#0" title="">Magento</a> (2)</li>
-                        <li><a href="#0" title="">Uncategorized</a> (9)</li>
-                    </ul>
-                </div>
+<div id="sidebar" class="s-content__sidebar large-4 column">
 
-                <div class="widget widget_text group">
-                    <h3 class="h6">Widget Text.</h3>
+    <?php if ( is_active_sidebar( 'sidebar0' ) ) : ?>
 
-                    <p>
-                    Lorem ipsum Ullamco commodo laboris sit dolore commodo aliquip incididunt fugiat esse dolor 
-                    aute fugiat minim eiusmod do velit labore fugiat officia ad sit culpa labore in consectetur 
-                    sint cillum sint consectetur voluptate adipisicing Duis irure magna ut sit amet reprehenderit.
-                    </p>
-                </div>
+        <?php dynamic_sidebar( 'sidebar0' ); ?>
 
-                <div class="widget widget_tags">
-                    <h3 class="h6">Post Tags.</h3>
+    <?php else : ?>
 
-                    <div class="tagcloud group">
-                        <a href="#0">Corporate</a>
-                        <a href="#0">Onepage</a>
-                        <a href="#0">Agency</a>
-                        <a href="#0">Multipurpose</a>
-                        <a href="#0">Blog</a>
-                        <a href="#0">Landing Page</a>
-                        <a href="#0">Resume</a>
-                    </div>
-                </div>
+        <!-- Fallback widgets displayed only when no active widgets are assigned -->
+        
+        <!-- 1. Serach Form -->
+        <div class="widget widget--search">
+            <h3 class="widget-title h6"><?php esc_html_e( 'Search', 'html2wp-keep-it-simple' ); ?></h3>
+            <?php get_search_form(); ?>
+        </div>
 
-                <div class="widget widget_popular">
-                    <h3 class="h6">Popular Post.</h3>
+        <!-- 2. Categories -->
+        <div class="widget widget--categories">
+            <h3 class="widget-title h6"><?php esc_html_e( 'Categories', 'html2wp-keep-it-simple' ); ?></h3>
+            <ul>
+                <?php
+                wp_list_categories( array(
+                    'show_count' => true,
+                    'title_li'   => '',
+                ) );
+                ?>
+            </ul>
+        </div>
 
-                    <ul class="link-list">
-                        <li><a href="#">Sint cillum consectetur voluptate.</a></li>
-                        <li><a href="#">Lorem ipsum Ullamco commodo.</a></li>
-                        <li><a href="#">Fugiat minim eiusmod do.</a></li>
-                    </ul>
-                </div>
-               
-           </div> <!-- end sidebar -->
+        <!-- 3. Text -->
+        <div class="widget widget_text group">
+            <h3 class="widget-title h6"><?php esc_html_e( 'About This Blog', 'html2wp-keep-it-simple' ); ?></h3>
+            <p>
+                <?php esc_html_e( 'Welcome to our blog. Manage your sidebar widgets directly from WordPress Dashboard > Appearance > Widgets.', 'html2wp-keep-it-simple' ); ?>
+            </p>
+        </div>
+
+        <!-- 4. Post Tags -->
+        <div class="widget widget_tags">
+            <h3 class="widget-title h6"><?php esc_html_e( 'Post Tags', 'html2wp-keep-it-simple' ); ?></h3>
+            <div class="tagcloud group">
+                <?php
+                wp_tag_cloud( array(
+                    'smallest' => 12,
+                    'largest'  => 12,
+                    'unit'     => 'px',
+                    'format'   => 'flat',
+                    'number'   => 10,
+                ) );
+                ?>
+            </div>
+        </div>
+
+        <!-- 5. Popular Posts -->
+        <div class="widget widget_popular">
+            <h3 class="widget-title h6"><?php esc_html_e( 'Popular Posts', 'html2wp-keep-it-simple' ); ?></h3>
+            <ul class="link-list">
+                <?php
+                $popular_query = new WP_Query( array(
+                    'posts_per_page'      => 3,
+                    'post_status'         => 'publish',
+                    'ignore_sticky_posts' => 1,
+                    'orderby'             => 'comment_count',
+                    'order'               => 'DESC',
+                ) );
+
+                if ( $popular_query->have_posts() ) :
+                    while ( $popular_query->have_posts() ) : $popular_query->the_post();
+                        ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </li>
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    ?>
+                    <li><?php esc_html_e( 'No popular posts found.', 'html2wp-keep-it-simple' ); ?></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+
+    <?php endif; ?>
+
+</div> <!-- end sidebar -->

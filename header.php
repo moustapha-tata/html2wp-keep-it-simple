@@ -48,7 +48,7 @@
             ?>
         </nav> <!-- end #nav-wrap -->
 
-        <a class="header-menu-toggle" href="#0" title="<?php esc_attr_e( 'Menu', 'html2wp' ); ?>">
-            <span><?php esc_html_e( 'Menu', 'html2wp' ); ?></span>
+        <a class="header-menu-toggle" href="#0" title="<?php esc_attr_e( 'Menu', 'html2wp-keep-it-simple' ); ?>">
+            <span><?php esc_html_e( 'Menu', 'html2wp-keep-it-simple' ); ?></span>
         </a>
     </header> <!-- Header End -->

@@ -41,7 +41,7 @@
                                 <?php the_excerpt(); ?>
                                 <p>
                                     <a href="<?php the_permalink(); ?>" class="more-link">
-                                        <?php esc_html_e( 'Read More', 'html2wp' ); ?> &rarr;
+                                        <?php esc_html_e( 'Read More', 'html2wp-keep-it-simple' ); ?> &rarr;
                                     </a>
                                 </p>
                             </div> 
@@ -55,8 +55,8 @@
                         <?php
                         the_posts_pagination( array(
                             'mid_size'  => 2,
-                            'prev_text' => esc_html__( '&larr; Previous', 'html2wp' ),
-                            'next_text' => esc_html__( 'Next &rarr;', 'html2wp' ),
+                            'prev_text' => esc_html__( '&larr; Previous', 'html2wp-keep-it-simple' ),
+                            'next_text' => esc_html__( 'Next &rarr;', 'html2wp-keep-it-simple' ),
                         ) );
                         ?>
                     </div>
@@ -64,8 +64,8 @@
                 <?php else : ?>
 
                     <div class="no-results entry">
-                        <h2 class="h2"><?php esc_html_e( 'No Posts Found', 'html2wp' ); ?></h2>
-                        <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'html2wp' ); ?></p>
+                        <h2 class="h2"><?php esc_html_e( 'No Posts Found', 'html2wp-keep-it-simple' ); ?></h2>
+                        <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'html2wp-keep-it-simple' ); ?></p>
                     </div>
 
                 <?php endif; ?>

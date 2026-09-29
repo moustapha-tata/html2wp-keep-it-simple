@@ -21,9 +21,9 @@
                 <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
                     <?php dynamic_sidebar( 'sidebar1' ); ?>
                 <?php else : ?>
-                    <h3 class="h6"><?php esc_html_e( 'About Keep It Simple', 'html2wp' ); ?></h3>
+                    <h3 class="h6"><?php esc_html_e( 'About Keep It Simple', 'html2wp-keep-it-simple' ); ?></h3>
                     <p>
-                        <?php esc_html_e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'html2wp' ); ?>
+                        <?php esc_html_e( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'html2wp-keep-it-simple' ); ?>
                     </p>
                 <?php endif; ?>
             </div>
@@ -34,10 +34,10 @@
                         <?php if ( is_active_sidebar( 'sidebar2' ) ) : ?>
                             <?php dynamic_sidebar( 'sidebar2' ); ?>
                         <?php else : ?>
-                            <h3 class="h6"><?php esc_html_e( 'Photostream', 'html2wp' ); ?></h3>
+                            <h3 class="h6"><?php esc_html_e( 'Photostream', 'html2wp-keep-it-simple' ); ?></h3>
                             <ul class="photostream group">
-                                <li><a href="#0"><img alt="<?php esc_attr_e( 'thumbnail', 'html2wp' ); ?>" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/thumb.jpg' ); ?>"></a></li>
-                                <li><a href="#0"><img alt="<?php esc_attr_e( 'thumbnail', 'html2wp' ); ?>" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/thumb.jpg' ); ?>"></a></li>
+                                <li><a href="#0"><img alt="<?php esc_attr_e( 'thumbnail', 'html2wp-keep-it-simple' ); ?>" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/thumb.jpg' ); ?>"></a></li>
+                                <li><a href="#0"><img alt="<?php esc_attr_e( 'thumbnail', 'html2wp-keep-it-simple' ); ?>" src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/thumb.jpg' ); ?>"></a></li>
                             </ul>
                         <?php endif; ?>
                     </div>
@@ -46,9 +46,9 @@
                         <?php if ( is_active_sidebar( 'sidebar3' ) ) : ?>
                             <?php dynamic_sidebar( 'sidebar3' ); ?>
                         <?php else : ?>
-                            <h3 class="h6"><?php esc_html_e( 'Navigate', 'html2wp' ); ?></h3>
+                            <h3 class="h6"><?php esc_html_e( 'Navigate', 'html2wp-keep-it-simple' ); ?></h3>
                             <ul class="s-footer__list s-footer-list--nav group">
-                                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'html2wp' ); ?></a></li>
+                                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'html2wp-keep-it-simple' ); ?></a></li>
                             </ul>
                         <?php endif; ?>
                     </div>
@@ -57,13 +57,13 @@
 
             <div class="ss-copyright">
                 <span>&copy; <?php echo esc_html( date( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>.</span> 
-                <span><?php esc_html_e( 'Design by', 'html2wp' ); ?> <a href="<?php echo esc_url( 'https://www.styleshout.com/' ); ?>" target="_blank" rel="noopener noreferrer">StyleShout</a></span>
+                <span><?php esc_html_e( 'Design by', 'html2wp-keep-it-simple' ); ?> <a href="<?php echo esc_url( 'https://www.styleshout.com/' ); ?>" target="_blank" rel="noopener noreferrer">StyleShout</a></span>
             </div>
 
         </div> <!-- end footer__bottom -->
 
         <div class="ss-go-top">
-            <a class="smoothscroll" title="<?php esc_attr_e( 'Back to Top', 'html2wp' ); ?>" href="#top">
+            <a class="smoothscroll" title="<?php esc_attr_e( 'Back to Top', 'html2wp-keep-it-simple' ); ?>" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
             </a>
         </div>

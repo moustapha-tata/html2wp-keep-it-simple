@@ -3,7 +3,7 @@
 A clean, semantic, and modern WordPress theme converted from static HTML/CSS into a fully dynamic and modular WordPress theme, developed strictly following the **WordPress Coding Standards (WPCS)** and modern security best practices.
 
 <!-- Live demo placeholder (To be updated in Day 5) -->
-> **Live Demo:** *Coming soon (Deploying on TasteWP/InstaWP)*
+> **Live Demo:** *[Click here to explore the live theme preview] (https://html2wp-demo.s2-tastewp.com/)*
 
 ---
 
@@ -55,7 +55,7 @@ This project showcases an enterprise-oriented conversion of a multi-page static 
 ├── index.php               # Standard WordPress Loop with pagination & thumbnail support
 ├── screenshot.png          # Theme preview for WordPress Dashboard
 └── style.css               # Main theme stylesheet & metadata
-
+```
 ---
 ⚙️ Installation & Setup
 Clone the Repository:
@@ -85,8 +85,8 @@ Under Page Attributes > Template, choose Custom Page.
 Populate the ACF fields (Hero Title, Hero Description, Button URL) and publish.
 
 📄 License & Credits
-Original HTML Template: Designed by StyleShout.
+Original HTML Template: Designed by [StyleShout](https://www.styleshout.com/).
 
-WordPress Theme Development: Developed by Moustapha Mahmoud.
+WordPress Theme Development: Developed by [Moustapha Mahmoud](https://github.com/moustapha-tata).
 
-Released under the GPL v2 or later.
+Released under the [GPL v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
