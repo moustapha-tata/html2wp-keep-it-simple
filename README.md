@@ -47,13 +47,19 @@ This project showcases an enterprise-oriented conversion of a multi-page static 
 │   ├── css/                # Base, main, and RTL stylesheets
 │   ├── js/                 # Modular JavaScript files (Modernizr, FontAwesome, main.js)
 │   └── images/             # Theme interface assets
+├── docs/
+│   └── screenshots/        # Project and ACF dashboard preview screenshots
 ├── page-templates/         # Custom page templates (e.g., template-custom.php)
 ├── .gitignore              # Environment and system ignore rules
 ├── footer.php              # Standardized footer template with dynamic widgets
 ├── functions.php           # Enqueuing, theme supports, navigation, & ACF hooks
 ├── header.php              # Standardized header with wp_head & semantic navigation
-├── index.php               # Standard WordPress Loop with pagination & thumbnail support
+├── index.php               # Main blog template with The Loop & pagination
+├── page.php                # Default static page template
+├── README.md               # Comprehensive theme documentation and setup guide
 ├── screenshot.png          # Theme preview for WordPress Dashboard
+├── sidebar.php             # Main widget area with dynamic fallbacks
+├── single.php              # Single blog post template with comments & navigation
 └── style.css               # Main theme stylesheet & metadata
 ```
 ---
